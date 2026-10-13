@@ -1,0 +1,9 @@
+ProudAuth SDK for Node.js
+Copyright 2026 The ProudAuth Authors
+
+Extracted from the ProudAuth working tree with original Apache-2.0 attribution.
+SOURCE-MANIFEST.json records the pre-migration source HEAD and input hashes.
+No package registry release has been published by this extraction.
+
+No third-party runtime dependencies. TypeScript and @types/node are build/test
+dependencies, under Apache-2.0 and MIT respectively.

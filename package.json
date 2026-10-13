@@ -1,0 +1,67 @@
+{
+  "name": "@proudauth/sdk",
+  "version": "0.2.0",
+  "description": "ProudAuth backend SDK for Node.js: offline JWT access-token verification, strict-online introspection with the support-access contract, an OIDC backend-for-frontend client and a typed administration client.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "sideEffects": false,
+  "exports": {
+    "./verifier": {
+      "types": "./dist/src/verifier.d.ts",
+      "default": "./dist/src/verifier.js"
+    },
+    "./introspection": {
+      "types": "./dist/src/introspection.d.ts",
+      "default": "./dist/src/introspection.js"
+    },
+    "./oidc-client": {
+      "types": "./dist/src/oidc-client.d.ts",
+      "default": "./dist/src/oidc-client.js"
+    },
+    "./bounded-state": {
+      "types": "./dist/src/bounded-state.d.ts",
+      "default": "./dist/src/bounded-state.js"
+    },
+    "./admin": {
+      "types": "./dist/src/admin.d.ts",
+      "default": "./dist/src/admin.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run clean && npm run build && node scripts/test.mjs",
+    "prepack": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.8",
+    "typescript": "5.9.3"
+  },
+  "keywords": [
+    "proudauth",
+    "oauth2",
+    "oidc",
+    "jwt",
+    "introspection",
+    "resource-server",
+    "bff"
+  ],
+  "homepage": "https://proudauth.com/docs/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proudbase/proudauth-sdk-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/proudbase/proudauth-sdk-node/issues"
+  }
+}

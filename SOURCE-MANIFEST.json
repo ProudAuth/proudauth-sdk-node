@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "source_checkout_head": "5ff6ddb852b572a05d4b1b5e6afdf2ecc1350a11",
+  "source_kind": "pre-migration working-tree snapshot; includes unpublished changes",
+  "intended_repository": "https://github.com/proudbase/proudauth-sdk-node",
+  "package_version": "0.2.0",
+  "registry_published": false,
+  "sources": [
+    {
+      "source": "sdk/node/src/admin.ts",
+      "destination": "src/admin.ts",
+      "sha256": "1f2e316f311f31bcf678dc76fd35da15b07936f37eb25200930a64e9dcc1a868"
+    },
+    {
+      "source": "sdk/node/src/bounded-state.ts",
+      "destination": "src/bounded-state.ts",
+      "sha256": "9796d32da5c3cc998e476dcac874c922c5683fcc88077fe1990e6f05687b1b5a"
+    },
+    {
+      "source": "sdk/node/src/claims.ts",
+      "destination": "src/claims.ts",
+      "sha256": "266ea5182da91ba48a995718efb2929d48372b041f838e5bb11818fb2cb4593f"
+    },
+    {
+      "source": "sdk/node/src/errors.ts",
+      "destination": "src/errors.ts",
+      "sha256": "4fc3bba2372ed6ce1f0d63f5a6345329dd5df2435cd2c51b9d3da3b6a20824d7"
+    },
+    {
+      "source": "sdk/node/src/internal/http.ts",
+      "destination": "src/internal/http.ts",
+      "sha256": "47e809ee2ecfab3a04835c415f63a44c00c9112d9699a13943964e86a528afc2"
+    },
+    {
+      "source": "sdk/node/src/internal/json.ts",
+      "destination": "src/internal/json.ts",
+      "sha256": "335622760266a438f4474b51df7b4955e5ba644c87ebecc091e4866f75c0d707"
+    },
+    {
+      "source": "sdk/node/src/internal/jwks.ts",
+      "destination": "src/internal/jwks.ts",
+      "sha256": "96058ce1455e5e509ac0497b06ef02743ea34e3e52a11ba62d91f4fc14f57a81"
+    },
+    {
+      "source": "sdk/node/src/internal/jws.ts",
+      "destination": "src/internal/jws.ts",
+      "sha256": "2094111f9b3a69480e0a4360c254b7c0e29769c66c24cfcf5f8311da64670216"
+    },
+    {
+      "source": "sdk/node/src/introspection.ts",
+      "destination": "src/introspection.ts",
+      "sha256": "db37b6f3bfed17b2a462e5e7cc9c143d182a2c13048c3e6e817accd58eaca8fd"
+    },
+    {
+      "source": "sdk/node/src/middleware.ts",
+      "destination": "src/middleware.ts",
+      "sha256": "a883295e73ceb3cd92c31502bbb229ea2d40c472e188248638c3243d9d14830e"
+    },
+    {
+      "source": "sdk/node/src/multi-issuer.ts",
+      "destination": "src/multi-issuer.ts",
+      "sha256": "1c12a0ac7ba744f8fc666ff912761c7cd8a7393e0fd2ecad008a8f751e3178df"
+    },
+    {
+      "source": "sdk/node/src/oidc-client.ts",
+      "destination": "src/oidc-client.ts",
+      "sha256": "eb7cf9bd21d9cd499257e9357c55474a8525a3103cc5638c3d8a4d75fcbaa8b5"
+    },
+    {
+      "source": "sdk/node/src/verifier.ts",
+      "destination": "src/verifier.ts",
+      "sha256": "f24abb7a8604bafee1be20952707cea0d615aedc5ce182d4c6ba4c83bf52f7b8"
+    },
+    {
+      "source": "sdk/node/test/admin.test.ts",
+      "destination": "test/admin.test.ts",
+      "sha256": "05af18046e9ec4e1236f0f22089c64ecf02345cb1591f185c87fa44459332eed"
+    },
+    {
+      "source": "sdk/node/test/bounded-state.test.ts",
+      "destination": "test/bounded-state.test.ts",
+      "sha256": "644f83ddfb714d3cc2503032123689ccad59814e4ecbf84c857c6298ec516503"
+    },
+    {
+      "source": "sdk/node/test/exports.test.ts",
+      "destination": "test/exports.test.ts",
+      "sha256": "5fe9594f612839b22743026d489913784a4b9e91635fb09f6caa1052df8494c5"
+    },
+    {
+      "source": "sdk/node/test/fixtures.test.ts",
+      "destination": "test/fixtures.test.ts",
+      "sha256": "2451bbba89e977331d2609d755c17fb56ca9287fc6328a883bac8b1802d84574"
+    },
+    {
+      "source": "sdk/node/test/helpers.ts",
+      "destination": "test/helpers.ts",
+      "sha256": "3fb9c62bcdb041b36d64fd26ae2900a3cc48bdd136d44d34815a45555e92e254"
+    },
+    {
+      "source": "sdk/node/test/introspection.test.ts",
+      "destination": "test/introspection.test.ts",
+      "sha256": "368346a672378987ef07953749d12d97998a9a87af702dab6a1a50872354e82f"
+    },
+    {
+      "source": "sdk/node/test/json.test.ts",
+      "destination": "test/json.test.ts",
+      "sha256": "6a961605e0937e02342aeb1b415f7eee10f61661041f5f705fc0b29894dafda3"
+    },
+    {
+      "source": "sdk/node/test/middleware.test.ts",
+      "destination": "test/middleware.test.ts",
+      "sha256": "dcdcdb198ee250ce6e8183946c4c860675492dbd853717de5bb600a75052d427"
+    },
+    {
+      "source": "sdk/node/test/multi-issuer.test.ts",
+      "destination": "test/multi-issuer.test.ts",
+      "sha256": "d443b98daed2bc5baf66b1a6386a1020d879714c78c53fbfd5f380f4fd783728"
+    },
+    {
+      "source": "sdk/node/test/oidc-client.test.ts",
+      "destination": "test/oidc-client.test.ts",
+      "sha256": "35283d2153f13cb2aba19d98e72cd3644cdd3dab5c513efb601f5303ca37e09e"
+    },
+    {
+      "source": "sdk/node/test/support-operations.test.ts",
+      "destination": "test/support-operations.test.ts",
+      "sha256": "89ef18aac9d5a75ef150da5fbfe6b70fdb1c9c130be9c828d3f2356af03d2ede"
+    },
+    {
+      "source": "sdk/node/test/verifier.test.ts",
+      "destination": "test/verifier.test.ts",
+      "sha256": "8bffabfb1b76565492721557da58d5c456c6faeb52a8a02ba0dfb1b940141d87"
+    },
+    {
+      "source": "sdk/node/package.json",
+      "destination": "package.json",
+      "sha256": "29061ecb71862417325157a47f66ed0cb70018280465a6037edc599ead9204f6"
+    },
+    {
+      "source": "sdk/node/package-lock.json",
+      "destination": "package-lock.json",
+      "sha256": "ef07b0c3b04794b2cab0dd30ad6d3e435a64ba57778c7d2513b9007aafdb4ac6"
+    },
+    {
+      "source": "sdk/node/tsconfig.json",
+      "destination": "tsconfig.json",
+      "sha256": "71330ba4ad7cdabd5f8d646a22c92508ccbf089a69118a649e6f07e9659bbff2"
+    },
+    {
+      "source": "sdk/node/README.md",
+      "destination": "README.md",
+      "sha256": "a508f5c22d979806ceb5cbbcc170a9136e12c585cfaaeb166b27917f0248703c"
+    },
+    {
+      "source": "sdk/node/LICENSE",
+      "destination": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "source": "sdk/fixtures/README.md",
+      "destination": "testdata/contracts/README.md",
+      "sha256": "75eb9c59cbcc9663b7c9ae88b2e9ea8fca01eb05e224d857cc5aec629876a718"
+    },
+    {
+      "source": "sdk/fixtures/access-tokens/cases.json",
+      "destination": "testdata/contracts/access-tokens/cases.json",
+      "sha256": "2140c779c7267b225713b8f1b198676822fc31ebe19f674b710279163a0eeba3"
+    },
+    {
+      "source": "sdk/fixtures/support-operations/cases.json",
+      "destination": "testdata/contracts/support-operations/cases.json",
+      "sha256": "5a6d2905db711c8728fe88f6707d76fc22d973ea5d2117ffe67840c4d98cf749"
+    }
+  ]
+}
