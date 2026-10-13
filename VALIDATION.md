@@ -20,8 +20,13 @@ Dart used pub get --offline; .NET used only local feeds and NuGetAudit=false.
 Generated build outputs/dependencies and temporary consumer directories were
 removed after verification. Dependency lockfiles and synthetic vectors remain.
 Final documentation/repository metadata edits do not change runtime behavior.
-No GitHub or registry publication was performed by this staging work. Independent
-CI is prepared but has not run yet for this repository.
+The staging validation preceded source publication. The reviewed source is now
+public at [`proudbase/proudauth-sdk-node`](https://github.com/proudbase/proudauth-sdk-node).
+The [initial independent CI run](https://github.com/proudbase/proudauth-sdk-node/actions/runs/38454415415)
+passed at commit `da57d7e75da68e06c30669383c76d46c70c8d8f0` on Node.js 20.10.0, 22 and 24.
+npm audit and package-content checks passed.
+GitHub private vulnerability reporting is enabled. No package-registry release
+or SDK release tag has been published.
 
 Excluded: original .git history, actual .env/credentials, deployment state,
 private screenshots/database backups, SDK caches/build output, image archives,
