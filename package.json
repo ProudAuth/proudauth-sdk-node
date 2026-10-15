@@ -59,9 +59,9 @@
   "homepage": "https://proudauth.com/docs/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/proudbase/proudauth-sdk-node.git"
+    "url": "git+https://github.com/proudauth/proudauth-sdk-node.git"
   },
   "bugs": {
-    "url": "https://github.com/proudbase/proudauth-sdk-node/issues"
+    "url": "https://github.com/proudauth/proudauth-sdk-node/issues"
   }
 }

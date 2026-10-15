@@ -4,7 +4,7 @@
 > No package-registry release or stable-support window is promised yet.
 > [Documentation](https://proudauth.com/docs/) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
 
-[![CI](https://github.com/proudbase/proudauth-sdk-node/actions/workflows/ci.yml/badge.svg)](https://github.com/proudbase/proudauth-sdk-node/actions/workflows/ci.yml)
+[![CI](https://github.com/proudauth/proudauth-sdk-node/actions/workflows/ci.yml/badge.svg)](https://github.com/proudauth/proudauth-sdk-node/actions/workflows/ci.yml)
 
 The first-party Node.js/TypeScript SDK for ProudAuth (spec §28, SDK-001 to SDK-009).
 It is a port of the Go SDK in `sdk/go`, with the same security behavior:
@@ -29,7 +29,7 @@ Version 0.2.0 (`SDK_VERSION` in `@proudauth/sdk/admin`), unpublished. Its compat
 This package is unpublished. Build it from this standalone checkout:
 
 ```sh
-git clone https://github.com/proudbase/proudauth-sdk-node.git
+git clone https://github.com/proudauth/proudauth-sdk-node.git
 cd proudauth-sdk-node
 npm ci
 npm pack
