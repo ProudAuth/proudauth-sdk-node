@@ -1,10 +1,19 @@
+<p align="center">
+  <a href="https://proudauth.com"><img src="https://raw.githubusercontent.com/ProudAuth/.github/main/assets/banner-proudauth-sdk-node.png" alt="ProudAuth SDK for Node.js" width="100%"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ProudAuth/proudauth-sdk-node"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-SDK-3ee6b0?logo=nodedotjs&logoColor=3ee6b0&style=for-the-badge&labelColor=06120e"></a>
+  <a href="https://github.com/ProudAuth/proudauth-sdk-node/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/ProudAuth/proudauth-sdk-node/ci.yml?branch=main&label=ci&style=for-the-badge&labelColor=06120e"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-3ee6b0?style=for-the-badge&labelColor=06120e"></a>
+  <a href="https://proudauth.com/docs/sdks/node/"><img alt="Documentation" src="https://img.shields.io/badge/docs-proudauth.com-3ee6b0?style=for-the-badge&labelColor=06120e"></a>
+</p>
+
 # @proudauth/sdk for Node.js
 
 > **Repository status:** public standalone source; package version 0.2.0 remains unpublished.
 > No package-registry release or stable-support window is promised yet.
 > [Documentation](https://proudauth.com/docs/) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
-
-[![CI](https://github.com/proudauth/proudauth-sdk-node/actions/workflows/ci.yml/badge.svg)](https://github.com/proudauth/proudauth-sdk-node/actions/workflows/ci.yml)
 
 The first-party Node.js/TypeScript SDK for ProudAuth (spec §28, SDK-001 to SDK-009).
 It is a port of the Go SDK in `sdk/go`, with the same security behavior:
