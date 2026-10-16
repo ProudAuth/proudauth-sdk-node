@@ -3,7 +3,12 @@
 All changes, including breaking changes, are documented here. Package releases
 will use semantic versioning; the initial 0.x API may change between minor versions.
 
-## Unreleased — 0.2.0 standalone extraction
+## Unreleased
+
+- Add live npm and repository version badges, package links, and installation
+  instructions that follow the latest published release.
+
+## 0.2.0 — 2026-10-16
 
 ### Added
 
@@ -11,10 +16,13 @@ will use semantic versioning; the initial 0.x API may change between minor versi
 - Vendored shared access-token and support-operation fixtures, with source HEAD
   and SHA-256 provenance, and an offline integrity check.
 - Standalone contribution and private vulnerability reporting policies.
+- Public npm publishing configuration and prepublish test/package validation.
 
 ### Changed
 
 - Monorepo-relative test inputs and documentation links now work from this checkout.
+- Installation instructions cover npm and building a local tarball.
 
-The standalone source is public. No registry package or release tag has been published.
-The existing SDK behavior and 0.2.0 version identifiers are retained.
+First npm release of the standalone SDK, published as `@proudauth/sdk@0.2.0`
+with the `latest` tag. The existing SDK behavior and 0.2.0 version identifiers
+are retained.

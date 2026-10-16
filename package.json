@@ -4,6 +4,10 @@
   "description": "ProudAuth backend SDK for Node.js: offline JWT access-token verification, strict-online introspection with the support-access contract, an OIDC backend-for-frontend client and a typed administration client.",
   "license": "Apache-2.0",
   "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "engines": {
     "node": ">=20.10"
   },
@@ -41,7 +45,8 @@
     "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
     "build": "tsc -p tsconfig.json",
     "test": "npm run clean && npm run build && node scripts/test.mjs",
-    "prepack": "npm run clean && npm run build"
+    "prepack": "npm run clean && npm run build",
+    "prepublishOnly": "npm test && node scripts/check-package.mjs"
   },
   "devDependencies": {
     "@types/node": "26.6.5",
