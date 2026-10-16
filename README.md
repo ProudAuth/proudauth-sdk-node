@@ -3,20 +3,80 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ProudAuth/proudauth-sdk-node"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-SDK-3ee6b0?logo=nodedotjs&logoColor=3ee6b0&style=for-the-badge&labelColor=06120e"></a>
+  <a href="https://www.npmjs.com/package/@proudauth/sdk"><img alt="npm latest version" src="https://img.shields.io/npm/v/%40proudauth%2Fsdk/latest?label=npm&logo=npm&logoColor=3ee6b0&color=3ee6b0&style=for-the-badge&labelColor=06120e"></a>
+  <a href="https://github.com/ProudAuth/proudauth-sdk-node/blob/main/package.json"><img alt="Repository package version" src="https://img.shields.io/github/package-json/v/ProudAuth/proudauth-sdk-node/main?label=source&color=3ee6b0&style=for-the-badge&labelColor=06120e"></a>
+  <a href="#installation"><img alt="Supported Node.js versions" src="https://img.shields.io/node/v/%40proudauth%2Fsdk?label=Node.js&logo=nodedotjs&logoColor=3ee6b0&color=3ee6b0&style=for-the-badge&labelColor=06120e"></a>
   <a href="https://github.com/ProudAuth/proudauth-sdk-node/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/ProudAuth/proudauth-sdk-node/ci.yml?branch=main&label=ci&style=for-the-badge&labelColor=06120e"></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-3ee6b0?style=for-the-badge&labelColor=06120e"></a>
+  <a href="LICENSE"><img alt="Package license" src="https://img.shields.io/npm/l/%40proudauth%2Fsdk?color=3ee6b0&style=for-the-badge&labelColor=06120e"></a>
   <a href="https://proudauth.com/docs/sdks/node/"><img alt="Documentation" src="https://img.shields.io/badge/docs-proudauth.com-3ee6b0?style=for-the-badge&labelColor=06120e"></a>
 </p>
 
-# @proudauth/sdk for Node.js
+<p align="center">
+  <a href="https://www.npmjs.com/package/@proudauth/sdk"><strong>npm package</strong></a> ·
+  <a href="https://proudauth.com/docs/sdks/node/">Documentation</a> ·
+  <a href="CHANGELOG.md">Changelog</a> ·
+  <a href="CONTRIBUTING.md">Contributing</a> ·
+  <a href="SECURITY.md">Security</a>
+</p>
 
-> **Repository status:** public standalone source; package version 0.2.0 remains unpublished.
-> No package-registry release or stable-support window is promised yet.
-> [Documentation](https://proudauth.com/docs/) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
+# ProudAuth SDK for Node.js
 
-The first-party Node.js/TypeScript SDK for ProudAuth (spec §28, SDK-001 to SDK-009).
-It is a port of the Go SDK in `sdk/go`, with the same security behavior:
+The official Node.js and TypeScript SDK for [ProudAuth](https://proudauth.com).
+Verify access tokens, enforce strict-online access, build backend login flows,
+and work with the administration API through typed clients.
+
+- **Zero runtime dependencies**, using Node.js built-ins and the global `fetch`.
+- **TypeScript declarations included**, with ESM entry points for each module.
+- **RS256, PS256, ES256 and EdDSA (Ed25519)** verification; `none` and HMAC are rejected.
+- **Apache-2.0 licensed**.
+
+## Installation
+
+Requires **Node.js 20.10 or later** and an ESM application (`"type": "module"`).
+
+```sh
+npm install @proudauth/sdk
+```
+
+[View on npm](https://www.npmjs.com/package/@proudauth/sdk) ·
+[Published versions](https://www.npmjs.com/package/@proudauth/sdk?activeTab=versions)
+
+The command installs the release tagged `latest` on npm. Import the module you
+need, for example:
+
+```js
+import { Verifier } from '@proudauth/sdk/verifier';
+import { AdminClient } from '@proudauth/sdk/admin';
+```
+
+<details>
+<summary>Build and install from source</summary>
+
+```sh
+git clone https://github.com/proudauth/proudauth-sdk-node.git
+cd proudauth-sdk-node
+npm ci
+npm pack
+```
+
+In your application, run `npm install` with the path to the `.tgz` filename
+printed by `npm pack`.
+
+The tarball includes the built ESM entry points, TypeScript declarations and
+license notices; it excludes tests and synthetic fixtures. No runtime dependencies
+are installed by this package.
+
+</details>
+
+The SDK is in its **0.x release series**; APIs may change between minor versions.
+See the [changelog](CHANGELOG.md) and
+[compatibility and security-update policy](https://proudauth.com/docs/integrations/sdk-compatibility/)
+before upgrading.
+
+## SDK modules
+
+The SDK implements spec §28 (SDK-001 to SDK-009), preserving the security
+behavior of the Go SDK:
 
 | Entry point                      | Purpose                                                                                       | Go equivalent                     |
 | -------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------- |
@@ -25,31 +85,6 @@ It is a port of the Go SDK in `sdk/go`, with the same security behavior:
 | `@proudauth/sdk/bounded-state`   | Local verification plus revocations replayed from the session-event stream, failing closed when stale | `sdk/go/verifier` (boundedstate.go) |
 | `@proudauth/sdk/oidc-client`     | Backend-for-frontend login: code + PKCE, ID-token validation, single-flight refresh, logout   | `sdk/go/oidcclient`               |
 | `@proudauth/sdk/admin`           | Typed admin API client: RFC 9457 problems, cursor pagination, idempotency, If-Match, deadlines, one-time secrets wrapped in `Secret`, deprecation reporting | `sdk/go/admin`                    |
-
-Version 0.2.0 (`SDK_VERSION` in `@proudauth/sdk/admin`), unpublished. Its compatibility and security-update policy, and the breaking change of 0.2.0, are in [docs/integrations/sdk-compatibility.md](https://proudauth.com/docs/integrations/sdk-compatibility/).
-
-- **Zero runtime dependencies.** The SDK uses only `node:crypto`, `node:http` and the global `fetch`.
-- **Node.js 20.10 or later**, ESM only (`"type": "module"`). Types are included.
-- **Algorithms:** RS256, PS256, ES256 and EdDSA (Ed25519). The SDK never accepts `none` or HMAC.
-- License: Apache-2.0.
-
-## Installation
-
-This package is unpublished. Build it from this standalone checkout:
-
-```sh
-git clone https://github.com/proudauth/proudauth-sdk-node.git
-cd proudauth-sdk-node
-npm ci
-npm pack
-# In your application:
-npm install /path/to/proudauth-sdk-node/proudauth-sdk-0.2.0.tgz
-```
-
-The tarball includes the built ESM entry points, TypeScript declarations and
-license notices; it excludes tests and synthetic fixtures. No runtime dependencies
-are installed by this package. Registry installation will become available only
-after an actual npm publication; it has not happened yet.
 
 ## Which validation profile should I use?
 

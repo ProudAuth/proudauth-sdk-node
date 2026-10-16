@@ -31,3 +31,31 @@ or SDK release tag has been published.
 Excluded: original .git history, actual .env/credentials, deployment state,
 private screenshots/database backups, SDK caches/build output, image archives,
 benchmark seeds and customer data. The original checkout was not modified.
+
+## npm release — 2026-10-16
+
+Published [`@proudauth/sdk@0.2.0`](https://www.npmjs.com/package/@proudauth/sdk/v/0.2.0)
+with public access and the `latest` tag.
+
+Validation used Node.js 25.9.0, npm 11.12.1 and TypeScript 7.0.2.
+Locked dependency installation reported zero vulnerabilities. All 4 vendored
+contract/vector files passed their integrity checks. All 116 SDK tests passed;
+the publish dry run and package-content check passed with 30 files.
+
+An unauthenticated registry request confirmed `latest` resolves to 0.2.0. The
+published tarball was downloaded without authentication and its SHA-512 integrity
+matched the locally verified tarball. A new consumer with empty npm credential
+configuration and a fresh cache installed `npm install @proudauth/sdk` from the
+public registry. All five public entry points imported successfully, the SDK and
+package versions agreed, no runtime dependencies were installed, and the
+TypeScript declarations resolved in the consumer. Chrome also showed version
+0.2.0 as Public and published under Apache-2.0.
+
+Published tarball SHA-1: `ab46c431d97e43976c94f4016f6001ab3b7cc1c0`.
+Published tarball integrity:
+`sha512-gpfGBHJLaEkTtHnJ5AYb/z6gj5Vy10bwGddhncAvPbFcY9ID1Dedo2TUvmu2h91DSNbAr1IeY8s8DMBOT6cCxA==`.
+
+The release preparation changes package metadata and documentation, without
+changing SDK runtime behavior. The npm publication preceded the GitHub update;
+the release documentation and public publishing settings are included in the
+subsequent repository update.
