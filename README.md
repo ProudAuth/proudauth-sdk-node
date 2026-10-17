@@ -386,6 +386,18 @@ The `Verifier` implements the §14.4 algorithm:
    - `token_kind` must be in the allowlist. The default is `user_access`, `service_access` and `exchange_access`.
 7. **Fail closed.** Every failure rejects, and a key-set outage becomes `unavailable` (503).
 
+## Known limitations
+
+- **Emergency signing-key rotation needs a restart.** The verifier loads the
+  issuer's JWKS once and refreshes it only when a token names an unknown
+  `kid`; it has no key expiry, no `refresh()` or `rejectKey()` method, and
+  `BoundedState` does not act on the server's `signing_key.rotated` event.
+  After an emergency rotation (`previous_key_compromised`), a key the server
+  has retired stays trusted by a running verifier until the process restarts.
+  Restart resource servers after an emergency rotation. SDK 0.3.0 adds key
+  expiry that honours the server's `Cache-Control`, explicit refresh and
+  rejection, and `signing_key.rotated` handling.
+
 ## Differences from the Go SDK
 
 Both SDKs require issuer/audience configuration, keep support tokens out of
