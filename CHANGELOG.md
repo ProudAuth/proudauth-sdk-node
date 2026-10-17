@@ -8,6 +8,14 @@ will use semantic versioning; the initial 0.x API may change between minor versi
 - Add live npm and repository version badges, package links, and installation
   instructions that follow the latest published release.
 
+### Known limitations
+
+- A running verifier keeps a retired or compromised signing key trusted until
+  the process restarts: the JWKS cache has no expiry, no `refresh()` or
+  `rejectKey()`, and `BoundedState` ignores `signing_key.rotated`. Restart
+  resource servers after an emergency rotation; 0.3.0 adds key expiry,
+  refresh and rejection. This applies to the published 0.2.0 as well.
+
 ## 0.2.0 — 2026-10-16
 
 ### Added

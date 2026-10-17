@@ -4,7 +4,8 @@
   "source_kind": "pre-migration working-tree snapshot; includes unpublished changes",
   "intended_repository": "https://github.com/proudauth/proudauth-sdk-node",
   "package_version": "0.2.0",
-  "registry_published": false,
+  "registry_published": true,
+  "registry": "https://www.npmjs.com/package/@proudauth/sdk",
   "sources": [
     {
       "source": "sdk/node/src/admin.ts",
