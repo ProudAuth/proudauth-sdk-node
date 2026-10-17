@@ -52,6 +52,14 @@ TypeScript declarations resolved in the consumer. Chrome also showed version
 0.2.0 as Public and published under Apache-2.0.
 
 Published tarball SHA-1: `ab46c431d97e43976c94f4016f6001ab3b7cc1c0`.
+
+Tarball provenance (checked 2026-10-18): no commit of this repository packs to
+that tarball byte for byte. `npm pack` at `696526d`, `379bb7b`/`8d7601f` and
+`c35b158`/`7f65324` gives three other checksums; against the pack of `7f65324`
+(current `main`) the published tarball differs in `README.md` only (its badge
+block predates the npm badges), and every `dist/src` file, `LICENSE`, `NOTICE`
+and `package.json` are identical. A `v0.2.0` tag, when the owner creates one,
+therefore points at `7f65324` with this note as the record of the difference.
 Published tarball integrity:
 `sha512-gpfGBHJLaEkTtHnJ5AYb/z6gj5Vy10bwGddhncAvPbFcY9ID1Dedo2TUvmu2h91DSNbAr1IeY8s8DMBOT6cCxA==`.
 
