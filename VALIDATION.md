@@ -25,8 +25,10 @@ public at [`proudbase/proudauth-sdk-node`](https://github.com/proudbase/proudaut
 The [initial independent CI run](https://github.com/proudbase/proudauth-sdk-node/actions/runs/38454415415)
 passed at commit `da57d7e75da68e06c30669383c76d46c70c8d8f0` on Node.js 20.10.0, 22 and 24.
 npm audit and package-content checks passed.
-GitHub private vulnerability reporting is enabled. No package-registry release
-or SDK release tag has been published.
+GitHub private vulnerability reporting is enabled. At that time no
+package-registry release or SDK release tag had been published; `@proudauth/sdk`
+0.2.0 reached npm on 2026-10-16 and the tag `v0.2.0` followed on 2026-10-18
+(below).
 
 Excluded: original .git history, actual .env/credentials, deployment state,
 private screenshots/database backups, SDK caches/build output, image archives,
@@ -58,8 +60,9 @@ that tarball byte for byte. `npm pack` at `696526d`, `379bb7b`/`8d7601f` and
 `c35b158`/`7f65324` gives three other checksums; against the pack of `7f65324`
 (current `main`) the published tarball differs in `README.md` only (its badge
 block predates the npm badges), and every `dist/src` file, `LICENSE`, `NOTICE`
-and `package.json` are identical. A `v0.2.0` tag, when the owner creates one,
-therefore points at `7f65324` with this note as the record of the difference.
+and `package.json` are identical. The annotated tag `v0.2.0` (created
+2026-10-18, with a GitHub release) therefore points at `7f65324`, with this note
+as the record of the difference.
 Published tarball integrity:
 `sha512-gpfGBHJLaEkTtHnJ5AYb/z6gj5Vy10bwGddhncAvPbFcY9ID1Dedo2TUvmu2h91DSNbAr1IeY8s8DMBOT6cCxA==`.
 
