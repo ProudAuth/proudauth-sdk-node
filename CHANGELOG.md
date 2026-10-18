@@ -33,4 +33,6 @@ will use semantic versioning; the initial 0.x API may change between minor versi
 
 First npm release of the standalone SDK, published as `@proudauth/sdk@0.2.0`
 with the `latest` tag. The existing SDK behavior and 0.2.0 version identifiers
-are retained.
+are retained. The repository tag `v0.2.0` (2026-10-18) points at `7f65324`, the
+commit of the publication; the published tarball differs from that commit's
+pack in `README.md` only ([VALIDATION.md](VALIDATION.md)).
